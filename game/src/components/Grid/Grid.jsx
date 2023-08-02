@@ -68,6 +68,7 @@
         }
         setBoard([...board])
         setTurn(!turn);
+
     }
 
     function reset(){
@@ -89,7 +90,7 @@
             <div className="grid">
                 {board.map((value,idx) => {
                     // return <Card  onPlay = {play}  key={idx}/>
-                    return <Card onPlay={play} player={value}  key={idx} index={idx} />
+                    return <Card  gameEnd ={winner ? true:false}   onPlay={play} player={value}  key={idx} index={idx} />
 
                 } )}
                 {/* <Card/>
