@@ -39,6 +39,17 @@
             return symbol;
         }
 
+        // Diagonal test 
+        if(board[0] == board[4] && board[4] == board[8]  && board[8] == symbol){
+            return symbol;
+        }
+
+        // Diagonal 2 Test
+
+        if(board[2] == board[4] && board[4] == board[6]  && board[6] == symbol){
+            return symbol;
+        }
+
         return "";
 
   }
@@ -64,7 +75,7 @@
 
         if(win){
             setWinner(win);
-            toast.success('Congratulations ${won} won the game')
+            toast.success('Congratulations  ${`won`}  won the game')
         }
         setBoard([...board])
         setTurn(!turn);
